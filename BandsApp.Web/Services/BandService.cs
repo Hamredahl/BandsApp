@@ -12,4 +12,8 @@ public class BandService
 
     public Band? GetBandById(int Id) => bands
         .SingleOrDefault(b => b.Id == Id);
+
+    public Band[] GetAllBands() => bands
+        .OrderBy(b => b.Name)
+        .ToArray();
 }
