@@ -10,8 +10,8 @@
         <ol>
             @foreach(var item in Model)
             {
-            <li>Name: @item.Name, Description: @item.Description</li>               
-            }
+            <a href="/details/@item.Id" style="margin-right: 2rem; ">@item.Name</a>
+        }
         </ol>
     </body>
 </html>

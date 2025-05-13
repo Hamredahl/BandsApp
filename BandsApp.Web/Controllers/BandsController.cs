@@ -13,4 +13,12 @@ public class BandsController : Controller
         var model = bandsService.GetAllBands();
         return View(model);
     }
+
+    [Route("details/{id}")]
+
+    public IActionResult Details(int id)
+    {
+        var model = bandsService.GetBandById(id);
+        return View(model);
+    }
 }
