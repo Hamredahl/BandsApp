@@ -6,4 +6,14 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\images\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\images\BABYMETAL_500px.png" />
+    <None Include="wwwroot\images\Jackson5_500px.png" />
+    <None Include="wwwroot\images\NWA_500px.png" />
+  </ItemGroup>
+
 </Project>
