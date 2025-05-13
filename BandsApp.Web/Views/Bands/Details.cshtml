@@ -5,34 +5,94 @@
 <head>
     <title>@Model.Name - Details</title>
     <link rel="stylesheet" href="https://unpkg.com/@@picocss/pico@latest/css/pico.classless.min.css">
+
+    <style>
+        main {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .image-albums {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        .albums {
+            flex-shrink: 0;
+            min-width: 150px;
+        }
+
+        .albums ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        img {
+            max-width: 500px;
+            width: 100%;
+            height: auto;
+        }
+
+        iframe {
+            display: block;
+            margin: 2rem auto;
+            max-width: 500px;
+            width: 100%;
+            height: 281px;
+
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+         
+        }
+
+        .video-container {
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+            .video-container h4 {
+                font-size: 1.2rem;
+                margin-bottom: 1rem;
+            }
+    </style>
+
 </head>
 <body>
     <h2>@Model.Name</h2>
 
     <p>@Model.Description</p>
 
+
+    <div class="image-albums">
+        <div class="albums">
+            <h3>Albums</h3>
+            <ul>
+                @foreach (var album in Model.Albums)
+                {
+                    <li>@album</li>
+                }
+            </ul>
+        </div>
+
     <img src="~/images/@Model.Image" width="500" height="500" alt="Image of @Model.Name"/>
 
-    <div style="margin-top: 1rem;">
-        
-        
-    <iframe width="889" height="500" src=@Model.YouTubeUrl title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-    </div>
+        <div class="video-container">
+            <h4>YouTube Video</h4>
+            <iframe width="889" height="500" src="@Model.YouTubeUrl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
 
 
 
 
 
-    <div>
-        <ul>
-            @foreach (var album in Model.Albums)
-            {
-                <li>@album</li>
-            }
-        </ul> 
-    </div>
 
-    <div></div><a href="/">⬅ Back to list</a></div>
+    <div><a href="/">⬅ Back to list</a></div>
 </body>
 </html>
