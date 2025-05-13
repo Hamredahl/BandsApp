@@ -10,4 +10,6 @@ public class BandService
             new Band { Id = 2, Name = "", Description = ""}
         ];
 
+    public Band? GetBandById(int Id) => bands
+        .SingleOrDefault(b => b.Id == Id);
 }
