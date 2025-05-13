@@ -13,6 +13,17 @@
 
     <img src="~/images/@Model.Image" width="500" height="500" alt="Image of @Model.Name"/>
 
+    <div style="margin-top: 1rem;">
+        
+        
+    <iframe width="889" height="500" src=@Model.YouTubeUrl title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    </div>
+
+
+
+
+
     <div>
         <ul>
             @foreach (var album in Model.Albums)

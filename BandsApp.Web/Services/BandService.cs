@@ -18,7 +18,8 @@ public class BandService
                     "Maybe Tomorrow (1971)","Lookin\' Through the Windows (1972)",
                     "Skywriter (1973)","G.I.T.: Get It Together (1973)",
                     "Dancing Machine (1974)",
-                    "Moving Violation (1975)"]
+                    "Moving Violation (1975)"],
+                YouTubeUrl = "https://www.youtube.com/embed/ho7796-au8U"
             },
             new Band { Id = 1, 
                 Name = "BABYMETAL", 
@@ -29,7 +30,8 @@ public class BandService
                     "Metal Resistance (2016)", 
                     "Metal Galaxy (2019)", 
                     "The Other One (2023)", 
-                    "Metal Forth (2025)"]
+                    "Metal Forth (2025)"],
+                YouTubeUrl = "https://www.youtube.com/embed/WIKqgE4BwAY"
             },
             new Band { Id = 2, 
                 Name = "NWA", 
@@ -37,9 +39,11 @@ public class BandService
                 Image = "NWA_500px.png",
                 Albums = [
                     "Straight Outta Compton (1989)",
-                    "Niggaz4Life (1991)"]                
+                    "Niggaz4Life (1991)"],
+                YouTubeUrl = "https://www.youtube.com/embed/qZuxPKUVGiw"
             }
         ];
+
 
     public Band? GetBandById(int Id) => bands
         .SingleOrDefault(b => b.Id == Id);
