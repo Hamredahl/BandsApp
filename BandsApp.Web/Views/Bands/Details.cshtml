@@ -13,6 +13,15 @@
 
     <img src="~/images/@Model.Image" width="500" height="500" alt="Image of @Model.Name"/>
 
+    <div>
+        <ul>
+            @foreach (var album in Model.Albums)
+            {
+                <li>@album</li>
+            }
+        </ul> 
+    </div>
+
     <div></div><a href="/">⬅ Back to list</a></div>
 </body>
 </html>
